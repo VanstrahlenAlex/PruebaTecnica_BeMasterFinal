@@ -61,7 +61,7 @@ const Dashboard = () => {
 							</div>
 						</div>
 					</div>
-					<div className="ml-3">
+					<div className="ml-5">
 						<div className="relative max-w-sm ml-10 pl-[10.1px]">
 							<button className="absolute inset-y-0 ml-2 -left-10 flex items-center px-2 text-gray-700 bg-gray-100 border border-gray-300 rounded-l-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:purple-blue-500">
 								<Search />
@@ -111,7 +111,9 @@ const Dashboard = () => {
 						</table>
 					</div>
 				) : (
-					<Folders onFolderClick={handleFolderClick} />
+					<div className="p-10">
+						<Folders onFolderClick={handleFolderClick} />
+					</div>
 				)}
 			</div>
 		</div>
