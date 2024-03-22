@@ -54,7 +54,7 @@ const Dashboard = () => {
 									<Folder />
 									Nueva Carpeta
 								</button>
-								<button className="bg-purple-700 hover:bg-purple-900 text-white py-2 px-4 rounded flex gap-2">
+								<button className="bg-purple-700 hover:bg-purple-900  text-white py-2 px-4 rounded flex gap-2">
 									<CirclePlay />
 									Nuevo Video
 								</button>
@@ -71,19 +71,19 @@ const Dashboard = () => {
 					</div>
 				</div>
 			)}
-			<div className="m-5">
+			<div className="">
 				{selectedFolder ? (
 					<div className="p-5">
-						<div className="flex items-center">
-							<button className="text-white bg-purple-900 rounded-md p-2" onClick={handleGoBack}>
+						<div className="flex items-center pb-10">
+							<button className="text-white bg-purple-900  rounded-md p-2" onClick={handleGoBack}>
 								<ArrowLeft />
 							</button>
-							<h1 className="text-xl">
+							<h1 className="text-xl pl-2">
 								Home/ <span className="font-bold">{selectedFolder.Nombre}</span>
 							</h1>
 						</div>
 
-						<table className='table-auto w-full'>
+						<table className='table-auto w-full '>
 							<thead className='border-b-2 border-gray-200'>
 								<tr>
 									<th className="p-2 font-semibold tracking-wide text-left gap-4">
@@ -96,7 +96,7 @@ const Dashboard = () => {
 							</thead>
 							<tbody>
 								{selectedFolder.Archivos.map((archivo, index) => (
-									<tr key={index}>
+									<tr key={index} className='hover:bg-gray-100'>
 										<td className="w-4/5 p-3 gap-3 flex flex-row ">
 											<input type="checkbox" className="ml-2" />
 											<CirclePlay color="#B369F5" />
